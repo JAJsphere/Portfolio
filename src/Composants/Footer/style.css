@@ -1,0 +1,131 @@
+/* FOOTER */
+
+.footer {
+  margin-top: 120px;
+  padding: 80px 0; /* padding horizontal supprimé pour coller aux bords */
+  background: #fafafa;
+  font-family: "Inter", sans-serif; /* police principale cohérente */
+}
+
+.footer-container {
+  max-width: 1200px;  /* largeur max du contenu */
+  margin: 0 auto;      /* centrer le contenu */
+  display: flex;
+  justify-content: space-between;
+  gap: 120px;
+  flex-wrap: wrap;     /* pour responsive */
+}
+
+/* LEFT */
+
+.footer-title {
+  font-size: 2rem;          /* 32px approx pour cohérence avec accueil */
+  font-weight: 700;
+  color: #1e1b4b;
+  margin-bottom: 10px;
+}
+
+.footer-desc {
+  font-size: 1rem;          /* 16px */
+  color: #4b5563;
+  margin-bottom: 25px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.logo-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #a855f7;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.logo-text {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  color: #111;
+}
+
+.footer-role {
+  font-size: 0.875rem; /* 14px */
+  color: #6b7280;
+  margin-top: 5px;
+}
+
+/* RIGHT */
+
+.footer-nav-title {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 600;
+  color: #1e1b4b;
+  margin-bottom: 25px;
+}
+
+.footer-nav-columns {
+  display: flex;
+  gap: 80px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-link {
+  text-decoration: none;
+  font-size: 0.9375rem; /* 15px */
+  color: #4b5563;
+  transition: 0.25s;
+}
+
+.footer-link:hover {
+  color: #7c3aed;
+}
+
+/* SOCIAL ICONS */
+
+.footer-socials {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.social-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4b5563;
+  font-size: 22px;
+  transition: 0.25s;
+}
+
+.social-icon:hover {
+  background: #d1d5db;
+  transform: scale(1.1);
+}
+
+/* COPYRIGHT */
+
+.footer-copy {
+  text-align: right;
+  margin-top: 40px;
+  font-size: 0.875rem; /* 14px */
+  line-height: 22px;
+  color: #6b7280;
+}

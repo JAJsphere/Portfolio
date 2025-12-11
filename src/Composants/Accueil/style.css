@@ -1,0 +1,261 @@
+/* ---------- ACCUEIL MAIN ---------- */
+
+.accueil-main {
+  margin-top: 140px;
+  width: 100%;
+  min-height: 72vh;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 2rem;
+  
+}
+
+.accueil-main-bts-title {
+  color: #6d28d9;
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.accueil-main-title {
+  margin-top: 20px;
+  font-size: 100px;
+  font-weight: 700;
+  color: #1e1b4b;
+}
+
+.accueil-main-title span {
+  color: #4f46e5;
+}
+
+.accueil-main-subtitle {
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 400;
+  color: #4b5563;
+}
+
+.accueil-main-separator {
+  margin-top: 30px;
+  font-size: 28px;
+}
+
+.accueil-main-buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+
+
+/* ---------- BOUTONS -> HEADER ---------- */
+
+.accueil-main-btn {
+  padding: 18px 36px;
+  border-radius: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+  font-weight: bold;
+}
+
+/* Bouton violet */
+.accueil-main-btn-purple {
+  background: #8b5cf6;
+  color: white;
+  border: none;
+}
+
+.accueil-main-btn-purple:hover {
+  background: #7c3aed;
+  transform: scale(1.1);
+}
+
+/* Bouton blanc */
+.accueil-main-btn-white {
+  background: white;
+  border: 2px solid #8b5cf6;
+  color: #8b5cf6;
+}
+
+.accueil-main-btn-white:hover {
+  background: #f3e8ff;
+  transform: scale(1.1);
+}
+
+
+
+
+/* ---------- ABOUT SECTION ---------- */
+
+.accueil-about {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+  font-family: "Inter", sans-serif;
+  color: #333;
+}
+
+.about-container {
+  max-width: 900px;        
+  width: 100%;
+  padding: 0 2rem;
+  text-align: center;       
+}
+
+/* TITRE avec animation éclair */
+.accueil-about-title {
+  font-size: 3rem;
+  color: #8e44ff;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.accueil-about-title::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6); /* couleur de l’éclair */
+  transform: skewX(-20deg);
+  animation: flash 1.2s infinite;
+}
+
+@keyframes flash {
+  0% {
+    left: -75%;
+  }
+  50% {
+    left: 125%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+/* TEXTE */
+.accueil-about-text {
+  line-height: 1.9;
+  font-size: 1.3rem;
+  color: #4b4b4b;
+  margin-bottom: 1.8rem;
+  text-align: left;      
+}
+
+
+
+
+/* Symbole qui s'anime dans le header */
+.material-symbols-outlined {
+  font-size: 35px;
+  color: #7c3aed;
+}
+
+/* Animation douce de rotation */
+.material-symbols-outlined {
+  font-size: 35px;
+  color: #7c3aed;
+  display: inline-block;
+}
+
+/* Animation plus professionnelle */
+.animated-icon {
+  animation: bounceGlow 2s ease-in-out infinite;
+}
+
+@keyframes bounceGlow {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    text-shadow: 0 0 5px #7c3aed;
+  }
+  50% {
+    transform: translateY(-10px) scale(1.1);
+    text-shadow: 0 0 20px #a78bfa, 0 0 40px #c4b5fd;
+  }
+}
+
+
+
+
+
+/* ---------- SECTION EXPLORER MON UNIVERS ---------- */
+.accueil-explorer {
+  width: 100%;
+  padding: 4rem 2rem;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+.accueil-explorer-title {
+  font-size: 2.8rem;
+  color: #6d28d9;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.explorer-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  text-align: left;
+}
+
+.explorer-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  max-width: 280px;
+  flex: 1;
+  transition: transform 0.3s ease;
+}
+
+.explorer-card:hover {
+  transform: translateY(-10px);
+}
+
+.explorer-icon {
+  font-size: 40px;
+  margin-bottom: 1rem;
+}
+
+.explorer-icon.purple {
+  color: #8b5cf6;
+}
+
+.explorer-icon.blue {
+  color: #3b82f6;
+}
+
+.explorer-card-title {
+  font-size: 1.5rem;
+  color: #1e1b4b;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.explorer-card-text {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.explorer-card-link {
+  font-weight: bold;
+  color: #8b5cf6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.explorer-card-link:hover {
+  color: #7c3aed;
+}
