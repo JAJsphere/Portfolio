@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =======================
+   Container général
+======================= */
+.DetProContainer {
+  font-family: 'Arial', sans-serif;
+  color: #0c0f1a;
+}
+
+/* =======================
+   Header
+======================= */
+.DetProHeader {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  width: 100vw;
+  /* prend toute la largeur de l'écran */
+  margin-left: 0;
+  /* enlève la marge à gauche */
+  margin-right: 0;
+  /* enlève la marge à droite */
+}
+
+.DetProHeaderImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* couvre tout le header */
+}
+
+.DetProHeaderOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 20px;
+
+}
+
+.DetProBadges {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.DetProBadgeBlue {
+  background: #2563eb;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.DetProBadgeGrey {
+  background: #374151;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+
+.DetProTitlePopup {
+  font-size: 48px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.DetProSubtitlePopup {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.DetProBack {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.DetProTags {
+  margin-bottom: 20px;
+}
+
+.DetProTagStage {
+  background-color: #2f6aff;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.DetProTagYear {
+  border: 1px solid white;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.DetProTitle {
+  font-size: 48px;
+  font-weight: 900;
+  margin: 10px 0;
+}
+
+.DetProSubtitle {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* =======================
+   Sections
+======================= */
+.DetProSection {
+  padding: 60px 20px;
+  max-width: 1400px;
+  /* plus large pour l'image */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Texte limité pour la lecture */
+.DetProSectionContent {
+  max-width: 900px;
+  /* limite le texte pour rester lisible */
+  text-align: left;
+}
+
+/* Image immersive */
+.DetProSectionImage {
+  width: 100%;
+  height: 70vh;
+  /*object-fit: cover;
+  object-position: center top;
+  object-position: center bottom;*/
+  border-radius: 12px;
+  align-self: center;
+}
+
+/* Numéro de section */
+.DetProNumber {
+  font-size: 80px;
+  /* beaucoup plus gros */
+  font-weight: 900;
+  color: #f0f2f7;
+}
+
+/* Titre de section */
+.DetProSectionTitle {
+  font-size: 36px;
+  /* plus gros */
+  font-weight: 800;
+  margin: 15px 0 25px 0;
+}
+
+/* Texte principal */
+.DetProSectionText {
+  font-size: 20px;
+  /* plus gros */
+  line-height: 1.8;
+  border-left: 4px solid #2f6aff;
+  padding-left: 18px;
+}
+
+
+
+.DetBot-icone {
+
+
+  color: white;
+
+
+}

@@ -1,0 +1,485 @@
+/* =========================================
+   HEADER
+========================================= */
+.ParcoursHeader {
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 250px;
+    padding-bottom: 30rem;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.ParcoursHeaderBg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.ParcoursHeaderBg::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 65%);
+    border-radius: 50%;
+}
+
+.ParcoursHeaderBg::after {
+    content: "";
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(129, 140, 248, 0.08) 0%, transparent 65%);
+    border-radius: 50%;
+}
+
+/* Cartes décoratives */
+.ParcoursHeaderBgCarte {
+    position: absolute;
+    width: 160px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    opacity: 0.65;
+}
+
+.ParcoursHeaderBgCarteIcone {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.ParcoursHeaderBgCarte--1 { top: 12%; left: 5%; transform: rotate(-8deg); }
+.ParcoursHeaderBgCarte--2 { top: 8%; right: 8%; transform: rotate(6deg); width: 140px; }
+.ParcoursHeaderBgCarte--3 { bottom: 15%; left: 8%; transform: rotate(5deg); width: 130px; }
+.ParcoursHeaderBgCarte--4 { bottom: 12%; right: 6%; transform: rotate(-6deg); width: 150px; }
+
+.ParcoursHeaderBgCarteBarre {
+    height: 28px;
+    background: linear-gradient(90deg, #818cf8, #4f46e5);
+}
+
+
+.ParcoursHeaderBgCarteLignes {
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ParcoursHeaderBgCarteLignes div {
+    height: 7px;
+    background: #e5e7eb;
+    border-radius: 999px;
+}
+
+.ParcoursHeaderBgCarteLignes div:nth-child(1) { width: 80%; }
+.ParcoursHeaderBgCarteLignes div:nth-child(2) { width: 100%; }
+.ParcoursHeaderBgCarteLignes div:nth-child(3) { width: 55%; }
+
+/* Contenu central */
+.ParcoursHeaderInner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.ParcoursHeaderLabel {
+    color: #4f46e5;
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.ParcoursHeaderTitreWrap {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.ParcoursHeaderIcone {
+    font-size: 2rem;
+    color: #818cf8;
+    animation: ParcoursIconePulse 2.4s ease-in-out infinite;
+    line-height: 1;
+}
+
+.ParcoursHeaderIcone--delayed {
+    animation-delay: 1.2s;
+}
+
+@keyframes ParcoursIconePulse {
+    0%, 100% { opacity: 0.3; transform: scale(0.85); }
+    50%       { opacity: 1;   transform: scale(1.15); }
+}
+
+.ParcoursHeaderTitre {
+    font-size: clamp(70px, 11vw, 120px);
+    font-weight: 900;
+    color: #0b1220;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    margin: 0;
+}
+
+.ParcoursHeaderTitreAccent {
+    color: #4f46e5;
+}
+
+.ParcoursHeaderSousTitre {
+    font-size: clamp(17px, 2vw, 21px);
+    color: #6b7280;
+    font-weight: 400;
+    margin: 0;
+}
+
+.ParcoursHeaderScrollIndic {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 26px;
+    height: 42px;
+    border: 2px solid #c7d2fe;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    padding-top: 6px;
+    z-index: 1;
+}
+
+.ParcoursHeaderScrollDot {
+    width: 5px;
+    height: 10px;
+    background: #6366f1;
+    border-radius: 999px;
+    animation: ParcoursScrollAnim 1.8s ease-in-out infinite;
+}
+
+@keyframes ParcoursScrollAnim {
+    0%   { transform: translateY(0); opacity: 1; }
+    80%  { transform: translateY(12px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 0; }
+}
+
+/* =========================================
+   CONTENEUR
+========================================= */
+.Parcours-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+}
+
+/* =========================================
+   FORMATIONS
+========================================= */
+.Parcours-section {
+    text-align: left;
+    margin-top: 100px;
+}
+
+.Parcours-section h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #0b1220;
+}
+
+.Parcours-section-icon {
+    color: #6366f1;
+}
+
+.Parcours-card {
+    border: 1.5px solid #e0e7ff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+    background: white;
+    transition: all 0.25s ease;
+}
+
+.Parcours-card:hover {
+    border-color: #a5b4fc;
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.1);
+    transform: translateY(-2px);
+}
+
+.Parcours-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.4rem;
+}
+
+.Parcours-card-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #0b1220;
+}
+
+.Parcours-card-dates {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    font-weight: 500;
+    background: #f8f9ff;
+    border: 1px solid #e0e7ff;
+    padding: 3px 12px;
+    border-radius: 999px;
+}
+
+.Parcours-card-school {
+    color: #4f46e5;
+    margin: 0 0 0.75rem 0;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.Parcours-card-desc {
+    margin-bottom: 0.75rem;
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.Parcours-card-desc ul {
+    padding-left: 1.25rem;
+    margin: 0;
+}
+
+.Parcours-card-desc li {
+    margin-bottom: 4px;
+}
+
+.Parcours-card-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.Parcours-tag {
+    background: #e0e7ff;
+    color: #4f46e5;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* =========================================
+   EXPÉRIENCES
+========================================= */
+.Parcours-experiences-section {
+    margin-top: 5rem;
+    text-align: left;
+}
+
+.Parcours-experiences-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    color: #0b1220;
+}
+
+.Parcours-exp-card {
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1.5px solid #e0e7ff;
+    background: white;
+    margin-bottom: 1.5rem;
+    transition: all 0.25s ease;
+}
+
+.Parcours-exp-card:hover {
+    border-color: #a5b4fc;
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.1);
+    transform: translateY(-2px);
+}
+
+.Parcours-exp-top {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Parcours-exp-purple { background: linear-gradient(90deg, #4f46e5, #818cf8); }
+.Parcours-exp-blue   { background: linear-gradient(90deg, #818cf8, #a5b4fc); }
+
+.Parcours-exp-top-icon {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.Parcours-exp-content {
+    padding: 1.5rem;
+}
+
+.Parcours-exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.4rem;
+}
+
+.Parcours-exp-title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #0b1220;
+}
+
+.Parcours-exp-dates {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    font-weight: 500;
+    background: #f8f9ff;
+    border: 1px solid #e0e7ff;
+    padding: 3px 12px;
+    border-radius: 999px;
+}
+
+.Parcours-exp-company {
+    color: #4f46e5;
+    margin: 0 0 0.5rem 0;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.Parcours-exp-type {
+    display: inline-block;
+    background: #e0e7ff;
+    color: #4f46e5;
+    padding: 3px 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 999px;
+    margin-bottom: 0.875rem;
+}
+
+.Parcours-exp-desc {
+    margin-bottom: 0.75rem;
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.Parcours-exp-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.Parcours-exp-list li {
+    margin-bottom: 5px;
+}
+
+/* =========================================
+   CERTIFICATIONS
+========================================= */
+.Parcours-certifications-section {
+    margin-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+.Parcours-certifications-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #0b1220;
+    margin-bottom: 1.5rem;
+}
+
+.Parcours-certifications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.Parcours-certification-card {
+    width: 100%;
+    border: 1.5px solid #e0e7ff;
+    border-radius: 1rem;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    transition: all 0.25s ease;
+}
+
+.Parcours-certification-card:hover {
+    border-color: #a5b4fc;
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.1);
+    transform: translateY(-2px);
+}
+
+.Parcours-certification-left {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.Parcours-certification-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.Parcours-certification-left h3 {
+    margin: 0 0 3px 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0b1220;
+}
+
+.Parcours-certification-org {
+    margin: 0;
+    color: #4f46e5;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.Parcours-certification-year {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    font-weight: 500;
+    background: #f8f9ff;
+    border: 1px solid #e0e7ff;
+    padding: 3px 12px;
+    border-radius: 999px;
+}
+
+
+

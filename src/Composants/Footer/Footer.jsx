@@ -16,7 +16,7 @@ function Footer() {
 
 
           {/* Le bouton du footer utilise la même classe que les boutons de l'accueil, ça explique le nom de la classe */}
-          <button className="accueil-main-btn accueil-main-btn-purple"> 
+          <button className="accueil-btn accueil-btn--primary">
             Découvrir →
           </button>
 
@@ -26,7 +26,7 @@ function Footer() {
           </div>
 
           <p className="footer-role">
-            Développeuse WEB & Spécialiste Solutions
+            Étudiante en développement Web
           </p>
         </div>
 
@@ -48,18 +48,14 @@ function Footer() {
 
           {/* Social icons */}
           <div className="footer-socials">
-            <a href="#" className="social-icon">
-              <i className="fa-brands fa-github"></i>
-            </a>
-            <a href="#" className="social-icon">
-              <i className="fa-brands fa-linkedin-in"></i>
-            </a>
+              {/* Pas de réseaux */}
           </div>
         </div>
 
       </div>
+      <div className="footer-separator"></div>
 
-      <p className="footer-copy">© 2025 BTS SIO Portfolio<br />Tous droits réservés</p>
+      <p className="footer-copy">© 2026 BTS SIO Portfolio</p>
 
     </footer>
   );

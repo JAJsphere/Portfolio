@@ -1,9 +1,9 @@
 /* ----- HEADER ----- */
-/* Empêche le débordement horizontal */
 body {
   overflow-x: hidden;
+  font-family: 'Inter', 'Roboto', 'Helvetica Neue', sans-serif;
+  
 }
-
 
 .header {
   width: 100%;
@@ -11,12 +11,11 @@ body {
   background: white;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #e0e7ff;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 20;
-  font-family: "Inter", sans-serif;
 }
 
 .header-container {
@@ -28,7 +27,6 @@ body {
 }
 
 /* ----- LOGO ----- */
-
 .logo-link {
   display: flex;
   align-items: center;
@@ -40,7 +38,7 @@ body {
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: #a855f7;
+  background: linear-gradient(135deg, #4f46e5, #818cf8);
   color: white;
   display: flex;
   align-items: center;
@@ -52,29 +50,49 @@ body {
 .logo-text {
   font-size: 18px;
   font-weight: 600;
-  color: #111;
+  color: #3730a3;
 }
 
 /* ----- NAV LINKS ----- */
-
 .nav {
   display: flex;
   gap: 40px;
-  font-size:18px;
+  font-size: 16px;
 }
 
 .nav-link {
+  position: relative;
   text-decoration: none;
-  color: #333;
+  color: #4b5563;
   font-weight: 500;
-  transition: 0.25s;
+  transition: color 0.25s;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: -5px;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: #6366f1;
+  transition: width 0.20s ease-in-out;
 }
 
 .nav-link:hover {
-  color: #7c3aed;
+  color: #4f46e5;
+}
+
+.nav-link:hover::after {
+  width: calc(100% + 10px);
 }
 
 .nav-link.active {
-  color: #7c3aed;
+  color: #6366f1;
+  font-weight: 600;
 }
 
+.nav-link.active::after {
+  width: calc(100% + 10px);
+  background-color: #6366f1;
+}
